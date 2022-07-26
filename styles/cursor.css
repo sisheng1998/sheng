@@ -1,0 +1,135 @@
+.ss-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	direction: ltr;
+	contain: layout style size;
+	pointer-events: none;
+	transition: opacity 0.3s, color 0.4s;
+}
+
+.ss-cursor::before {
+	content: '';
+	position: absolute;
+	top: -24px;
+	left: -24px;
+	display: block;
+	width: 48px;
+	height: 48px;
+	transform: scale(0.2);
+	background: currentColor;
+	border-radius: 50%;
+	transition: transform 0.25s ease-in-out, opacity 0.1s;
+}
+
+.ss-cursor.-inverse {
+	color: #fff;
+}
+
+@supports (mix-blend-mode: exclusion) {
+	.ss-cursor.-exclusion {
+		mix-blend-mode: exclusion;
+	}
+
+	.ss-cursor.-exclusion::before {
+		background: #fff;
+	}
+}
+
+.ss-cursor.-pointer::before {
+	transform: scale(0.15);
+}
+
+.ss-cursor.-text::before {
+	opacity: 0.85;
+	transform: scale(1.7);
+}
+
+.ss-cursor.-text.-active::before {
+	transform: scale(1.6);
+	transition-duration: 0.2s;
+}
+
+.ss-cursor.-icon::before {
+	transform: scale(1.5);
+}
+
+.ss-cursor.-icon.-active::before {
+	transform: scale(1.4);
+}
+
+.ss-cursor.-hidden::before {
+	transform: scale(0);
+}
+
+.ss-cursor-text {
+	position: absolute;
+	top: -18px;
+	left: -18px;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0) rotate(10deg);
+	opacity: 0;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	transition: opacity 0.4s, transform 0.3s;
+}
+
+.ss-cursor.-text .ss-cursor-text,
+.ss-cursor.-icon .ss-cursor-text {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.ss-cursor-media {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	margin: -200px 0 0 -200px;
+}
+
+.ss-cursor-media img,
+.ss-cursor-media video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* border-radius: 50%; */
+	image-rendering: -webkit-optimize-contrast;
+}
+
+@supports (object-fit: cover) {
+	.ss-cursor-media img,
+	.ss-cursor-media video {
+		position: static;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: translateZ(0);
+	}
+}
+
+.ss-cursor-media-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transform: scale(0) translateZ(0);
+	padding: 1px;
+	opacity: 0;
+	/* border-radius: 50%; */
+	transition: border-radius 0.35s, transform 0.35s, opacity 0.2s 0.2s;
+}
+
+.ss-cursor.-media .ss-cursor-media-box {
+	opacity: 1;
+	transform: scale(1);
+	transition-duration: 0.4s, 0.4s;
+	transition-delay: 0s, 0s;
+}
