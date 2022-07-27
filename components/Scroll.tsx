@@ -23,9 +23,9 @@ const Scroll = ({ children }: ScrollProps) => {
 			}
 			containerRef={containerRef}
 		>
-			<div data-scroll-container ref={containerRef}>
+			<main data-scroll-container ref={containerRef}>
 				{children}
-			</div>
+			</main>
 		</RLSProvider>
 	)
 }

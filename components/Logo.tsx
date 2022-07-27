@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
-const Logo = ({ classes }: { classes: string }) => {
+const Logo = ({ className }: { className: string }) => {
 	return (
 		<Link href='/'>
 			<a
-				className={`text-3xl font-medium tracking-tighter${
-					classes ? classes : ''
+				data-cursor='-hidden'
+				className={`text-3xl font-medium tracking-tighter transition-opacity duration-700 ${
+					className ? className : ''
 				}`}
 			>
 				Sheng

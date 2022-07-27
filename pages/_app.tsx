@@ -38,6 +38,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 					href='/favicons/safari-pinned-tab.svg'
 					color='#ffffff'
 				/>
+				<meta name='google' content='notranslate' />
+				<meta httpEquiv='Content-Language' content='en' />
 			</Head>
 
 			<Layout>

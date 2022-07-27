@@ -1,3 +1,4 @@
+import NavBar from './NavBar'
 import Header from './Header'
 import Scroll from '../Scroll'
 import Cursor from '../Cursor'
@@ -9,9 +10,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
 	return (
 		<>
+			<NavBar />
+
 			<Scroll>
 				<Header />
-				<main data-scroll-section>{children}</main>
+				{children}
 			</Scroll>
 
 			<Cursor />

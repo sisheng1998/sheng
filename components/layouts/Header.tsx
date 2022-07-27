@@ -1,11 +1,5 @@
-import Logo from '../Logo'
-
 const Header = () => {
-	return (
-		<header data-scroll-section>
-			<Logo classes='' />
-		</header>
-	)
+	return <header className=''></header>
 }
 
 export default Header
