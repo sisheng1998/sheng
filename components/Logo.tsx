@@ -1,6 +1,10 @@
 import Link from 'next/link'
 
-const Logo = ({ className }: { className: string }) => {
+interface LogoProps {
+	className?: string
+}
+
+const Logo = ({ className }: LogoProps) => {
 	return (
 		<Link href='/'>
 			<a

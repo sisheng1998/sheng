@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import NavBar from './NavBar'
 import Header from './Header'
 import Scroll from '../Scroll'
@@ -8,12 +10,14 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+	const [section, setSection] = useState('')
+
 	return (
 		<>
-			<NavBar />
+			<NavBar setSection={setSection} />
 
 			<Scroll>
-				<Header />
+				<Header section={section} setSection={setSection} />
 				{children}
 			</Scroll>
 

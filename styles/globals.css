@@ -36,7 +36,8 @@
 	}
 
 	html {
-		@apply text-black selection:bg-black selection:text-white;
+		-webkit-tap-highlight-color: transparent;
+		@apply scroll-smooth text-black selection:bg-black selection:text-white;
 	}
 
 	img {
@@ -50,182 +51,59 @@
 
 @layer components {
 	nav .menu span {
-		backface-visibility: hidden;
-		-webkit-transition: top 0.3s 0.3s, -webkit-transform 0.3s;
-		transition: top 0.3s 0.3s, -webkit-transform 0.3s;
-		-o-transition: top 0.3s 0.3s, -o-transform 0.3s;
-		-moz-transition: top 0.3s 0.3s, transform 0.3s, -moz-transform 0.3s;
-		transition: top 0.3s 0.3s, transform 0.3s;
-		transition: top 0.3s 0.3s, transform 0.3s, -webkit-transform 0.3s,
-			-moz-transform 0.3s, -o-transform 0.3s;
+		transition-property: transform, top;
+		transition-delay: 0s, 0.15s;
+		transition-duration: 0.3s;
+	}
+
+	nav.-open .menu span {
+		top: 0;
+		transition-property: top, transform;
+		transition-delay: 0s, 0.15s;
+		transition-duration: 0.3s;
 	}
 
 	nav.-open .menu span:first-child {
-		-webkit-animation: menu-open-top 0.75s;
-		-moz-animation: menu-open-top 0.75s;
-		-o-animation: menu-open-top 0.75s;
-		animation: menu-open-top 0.75s;
-		top: 4px;
-		-webkit-transform: rotate(45deg) scaleX(1);
-		-moz-transform: rotate(45deg) scaleX(1);
-		-ms-transform: rotate(45deg) scaleX(1);
-		-o-transform: rotate(45deg) scaleX(1);
-		transform: rotate(45deg) scaleX(1);
-		-webkit-transition-duration: 0s, 0s;
-		-moz-transition-duration: 0s, 0s;
-		-o-transition-duration: 0s, 0s;
-		transition-duration: 0s, 0s;
+		transform: rotate(45deg);
 	}
 
 	nav.-open .menu span:last-child {
-		-webkit-animation: menu-open-bottom 0.75s;
-		-moz-animation: menu-open-bottom 0.75s;
-		-o-animation: menu-open-bottom 0.75s;
-		animation: menu-open-bottom 0.75s;
-		top: -4px;
-		-webkit-transform: rotate(-45deg) scaleX(1);
-		-moz-transform: rotate(-45deg) scaleX(1);
-		-ms-transform: rotate(-45deg) scaleX(1);
-		-o-transform: rotate(-45deg) scaleX(1);
-		transform: rotate(-45deg) scaleX(1);
-		-webkit-transition-duration: 0s, 0s;
-		-moz-transition-duration: 0s, 0s;
-		-o-transition-duration: 0s, 0s;
-		transition-duration: 0s, 0s;
+		transform: rotate(-45deg);
 	}
 
-	@keyframes menu-open-top {
-		0% {
-			opacity: 1;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(1);
-			-moz-transform: rotate(0) scaleX(1);
-			-o-transform: rotate(0) scaleX(1);
-			transform: rotate(0) scaleX(1);
-			-webkit-transform-origin: left center;
-			-moz-transform-origin: left center;
-			-o-transform-origin: left center;
-			transform-origin: left center;
-		}
-
-		30% {
-			opacity: 1;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(0);
-			-moz-transform: rotate(0) scaleX(0);
-			-o-transform: rotate(0) scaleX(0);
-			transform: rotate(0) scaleX(0);
-		}
-
-		30.1% {
-			opacity: 0;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(0);
-			-moz-transform: rotate(0) scaleX(0);
-			-o-transform: rotate(0) scaleX(0);
-			transform: rotate(0) scaleX(0);
-		}
-
-		31% {
-			opacity: 1;
-			top: -5px;
-			left: 3px;
-			-webkit-transform: rotate(45deg) scaleX(0);
-			-moz-transform: rotate(45deg) scaleX(0);
-			-o-transform: rotate(45deg) scaleX(0);
-			transform: rotate(45deg) scaleX(0);
-		}
-
-		80%,
-		100% {
-			opacity: 1;
-			top: -5px;
-			left: 3px;
-			-webkit-transform: rotate(45deg) scaleX(1);
-			-moz-transform: rotate(45deg) scaleX(1);
-			-o-transform: rotate(45deg) scaleX(1);
-			transform: rotate(45deg) scaleX(1);
-			-webkit-transform-origin: left center;
-			-moz-transform-origin: left center;
-			-o-transform-origin: left center;
-			transform-origin: left center;
-		}
+	.ss-btn {
+		@apply pointer-events-none relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-lg font-medium after:absolute after:inset-0 after:rounded-full after:border after:border-black after:border-opacity-10 after:transition-colors after:duration-200;
 	}
 
-	@keyframes menu-open-bottom {
-		0% {
-			opacity: 1;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(1);
-			-moz-transform: rotate(0) scaleX(1);
-			-o-transform: rotate(0) scaleX(1);
-			transform: rotate(0) scaleX(1);
-			-webkit-transform-origin: right center;
-			-moz-transform-origin: right center;
-			-o-transform-origin: right center;
-			transform-origin: right center;
-		}
+	.ss-btn-title {
+		@apply relative z-[1] block overflow-hidden;
+	}
 
-		50% {
-			opacity: 1;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(0);
-			-moz-transform: rotate(0) scaleX(0);
-			-o-transform: rotate(0) scaleX(0);
-			transform: rotate(0) scaleX(0);
-		}
+	.ss-btn-title span {
+		transition-property: color, transform;
+		transition-duration: 0.2s, 0.4s;
+		@apply relative block origin-top-left group-hover:-translate-y-[150%] group-hover:-skew-y-6 group-hover:text-white;
+	}
 
-		50.1% {
-			opacity: 0;
-			top: 0;
-			left: 0;
-			-webkit-transform: rotate(0) scaleX(0);
-			-moz-transform: rotate(0) scaleX(0);
-			-o-transform: rotate(0) scaleX(0);
-			transform: rotate(0) scaleX(0);
-		}
+	.ss-btn-title span::after {
+		content: attr(data-text) !important;
+		@apply absolute left-0 top-[150%] block origin-top-left skew-y-6 transition-transform duration-500;
+	}
 
-		51%,
-		55% {
-			opacity: 1;
-			top: -12px;
-			left: -4px;
-			-webkit-transform: rotate(-45deg) scaleX(0);
-			-moz-transform: rotate(-45deg) scaleX(0);
-			-o-transform: rotate(-45deg) scaleX(0);
-			transform: rotate(-45deg) scaleX(0);
-		}
-
-		100% {
-			opacity: 1;
-			top: -12px;
-			left: -4px;
-			-webkit-transform: rotate(-45deg) scaleX(1);
-			-moz-transform: rotate(-45deg) scaleX(1);
-			-o-transform: rotate(-45deg) scaleX(1);
-			transform: rotate(-45deg) scaleX(1);
-			-webkit-transform-origin: right center;
-			-moz-transform-origin: right center;
-			-o-transform-origin: right center;
-			transform-origin: right center;
-		}
+	.ss-btn-ripple {
+		@apply pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-[150%] translate-y-3/4 rounded-[50%] bg-black transition-transform duration-300 group-hover:translate-y-0;
 	}
 
 	.ss-link {
-		@apply relative inline-block origin-left transition-transform duration-500 hover:-translate-y-[125%] hover:skew-y-6 after:hover:-skew-y-6;
+		@apply relative inline-block origin-left transition-transform duration-500 hover:-translate-y-[120%] hover:skew-y-6 after:hover:-skew-y-6;
 	}
 
 	.ss-link::after {
 		content: attr(data-text) !important;
-		@apply absolute top-[125%] block origin-left skew-y-12 transition-transform;
+		@apply absolute top-[120%] block origin-left skew-y-12 transition-transform;
 	}
 
 	.ss-link-underline {
-		@apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/30 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:hover:scale-x-100;
+		@apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/10 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:hover:scale-x-100;
 	}
 }

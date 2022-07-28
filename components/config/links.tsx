@@ -1,9 +1,9 @@
 const resumeLink = '/Si_Sheng_Resume.pdf'
 
 const menuLinks: Record<string, string> = {
-	About: '#',
-	Projects: '#',
-	Contact: '#',
+	About: '#about',
+	Projects: '#projects',
+	Contact: '#contact',
 }
 
 const contactLinks: Record<string, { text: string; link: string }> = {

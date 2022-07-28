@@ -18,10 +18,10 @@ const Scroll = ({ children }: ScrollProps) => {
 			}}
 			watch={[]}
 			location={asPath}
+			containerRef={containerRef}
 			onLocationChange={(scroll: any) =>
 				scroll.scrollTo(0, { duration: 0, disableLerp: true })
 			}
-			containerRef={containerRef}
 		>
 			<main data-scroll-container ref={containerRef}>
 				{children}
