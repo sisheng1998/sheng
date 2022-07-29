@@ -104,6 +104,16 @@
 	}
 
 	.ss-link-underline {
-		@apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/10 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:hover:scale-x-100;
+		@apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/30 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:hover:scale-x-100;
+	}
+
+	.container {
+		@apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 sm:px-6 sm:py-24;
+	}
+
+	.outline-text {
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+			1px 1px 0 #000;
+		@apply text-white;
 	}
 }

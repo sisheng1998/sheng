@@ -1,32 +1,18 @@
 import type { NextPage } from 'next'
+import Hero from '../components/home/Hero'
 
 const Home: NextPage = () => {
 	return (
 		<>
-			<div data-scroll-section className='h-screen bg-red-50'>
-				test
-			</div>
-			<div data-scroll-section id='projects' className='h-screen bg-blue-50'>
-				projects
-			</div>
-			<div data-scroll-section className='h-screen bg-gray-50'>
-				test
-			</div>
-			<div data-scroll-section id='about' className='h-screen bg-green-50'>
-				about
-			</div>
-			<div data-scroll-section className='h-screen bg-indigo-50'>
-				test
-			</div>
-			<div data-scroll-section className='h-screen'>
-				test
-			</div>
-			<div data-scroll-section className='h-screen'>
-				test
-			</div>
-			<div data-scroll-section id='contact' className='h-screen'>
-				contact
-			</div>
+			<Hero />
+
+			<section data-scroll-section className='container -mt-24 pt-0'>
+				<p className='max-w-[40ch] text-4xl leading-normal tracking-tight lg:text-3xl sm:text-xl'>
+					Leading digital agency with solid design and development expertise. We
+					build ready-made websites, mobile applications, and elaborate online
+					business services.
+				</p>
+			</section>
 		</>
 	)
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import NavBar from './NavBar'
 import Header from './Header'
+import Footer from './Footer'
 import Scroll from '../Scroll'
 import Cursor from '../Cursor'
 
@@ -19,6 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
 			<Scroll>
 				<Header section={section} setSection={setSection} />
 				{children}
+				<Footer />
 			</Scroll>
 
 			<Cursor />

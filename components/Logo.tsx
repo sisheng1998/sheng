@@ -9,7 +9,7 @@ const Logo = ({ className }: LogoProps) => {
 		<Link href='/'>
 			<a
 				data-cursor='-hidden'
-				className={`text-3xl font-medium tracking-tighter transition-opacity duration-700 ${
+				className={`text-3xl font-medium tracking-tighter ${
 					className ? className : ''
 				}`}
 			>

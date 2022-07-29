@@ -23,7 +23,7 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 			></div>
 
 			<div
-				className={`fixed top-0 right-0 bottom-0 z-[200] flex w-full max-w-xl flex-col overflow-auto bg-white p-28 transition-all duration-700 lg:max-w-md lg:p-14 sm:p-8 ${
+				className={`fixed top-0 right-0 bottom-0 z-[200] flex w-full max-w-xl flex-col overflow-auto bg-white p-28 transition-all duration-700 xl:max-w-md xl:p-14 sm:p-6 ${
 					openMenu ? '' : 'pointer-events-none translate-x-full opacity-0'
 				}`}
 			>
@@ -45,24 +45,44 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 						</Link>
 					</MagneticButton>
 
-					{Object.keys(menuLinks).map((key: string, index: number) => (
-						<MagneticButton
-							key={index}
-							className='mb-3 block overflow-hidden'
-							onClick={() => {
-								setSection(menuLinks[key])
-								setOpenMenu(false)
-							}}
-						>
-							<span
-								data-text={key}
-								data-cursor='-exclusion -large'
-								className='ss-link py-1 text-5xl tracking-tight lg:text-4xl'
+					{Object.keys(menuLinks).map((key: string, index: number) =>
+						menuLinks[key].startsWith('/') ? (
+							<MagneticButton
+								key={index}
+								className='mb-3 block overflow-hidden'
+								onClick={() => {
+									setOpenMenu(false)
+								}}
 							>
-								{key}
-							</span>
-						</MagneticButton>
-					))}
+								<Link href={menuLinks[key]}>
+									<a
+										data-text={key}
+										data-cursor='-exclusion -large'
+										className='ss-link py-1 text-5xl tracking-tight lg:text-4xl'
+									>
+										{key}
+									</a>
+								</Link>
+							</MagneticButton>
+						) : (
+							<MagneticButton
+								key={index}
+								className='mb-3 block overflow-hidden'
+								onClick={() => {
+									setSection(menuLinks[key])
+									setOpenMenu(false)
+								}}
+							>
+								<span
+									data-text={key}
+									data-cursor='-exclusion -large'
+									className='ss-link py-1 text-5xl tracking-tight lg:text-4xl'
+								>
+									{key}
+								</span>
+							</MagneticButton>
+						)
+					)}
 
 					<MagneticButton className='block overflow-hidden'>
 						<Link href={resumeLink}>

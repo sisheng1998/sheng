@@ -22,14 +22,14 @@ const Header = ({ section, setSection }: HeaderProps) => {
 	return (
 		<header
 			data-scroll-section
-			className='flex items-center justify-between p-16 lg:p-8'
+			className='absolute inset-x-0 top-0 z-10 flex items-center justify-between p-16 xl:p-10 lg:p-8 sm:p-6'
 		>
 			<Logo />
 
 			<div className='flex items-center sm:hidden'>
 				<Button
 					text='Resume'
-					link={resumeLink}
+					href={resumeLink}
 					newTab={true}
 					className='-my-4'
 				/>
