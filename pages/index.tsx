@@ -6,11 +6,11 @@ const Home: NextPage = () => {
 		<>
 			<Hero />
 
-			<section data-scroll-section className='container -mt-24 pt-0'>
-				<p className='max-w-[40ch] text-4xl leading-normal tracking-tight lg:text-3xl sm:text-xl'>
-					Leading digital agency with solid design and development expertise. We
-					build ready-made websites, mobile applications, and elaborate online
-					business services.
+			<section data-scroll-section className='container -mt-24 pt-0 lg:-mt-16'>
+				<p className='max-w-[40ch] text-4xl leading-normal tracking-tight xl:text-3xl lg:text-2xl md:text-xl'>
+					Passionate about web development and UI/UX design. Specialized in
+					JavaScript and its frameworks/libraries. Independent, highly
+					motivated, and proactive self-starter.
 				</p>
 			</section>
 		</>

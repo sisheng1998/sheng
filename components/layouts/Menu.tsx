@@ -23,7 +23,7 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 			></div>
 
 			<div
-				className={`fixed top-0 right-0 bottom-0 z-[200] flex w-full max-w-xl flex-col overflow-auto bg-white p-28 transition-all duration-700 xl:max-w-md xl:p-14 sm:p-6 ${
+				className={`fixed top-0 right-0 bottom-0 z-[200] flex w-full max-w-xl flex-col overflow-auto bg-white p-28 transition-all duration-700 xl:max-w-md xl:p-14 md:left-0 md:p-6 ${
 					openMenu ? '' : 'pointer-events-none translate-x-full opacity-0'
 				}`}
 			>
@@ -31,7 +31,7 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 					<p className='mb-4 text-black/50 lg:text-sm'>Menu</p>
 
 					<MagneticButton
-						className='mb-3 hidden overflow-hidden sm:block'
+						className='mb-3 hidden overflow-hidden md:block'
 						onClick={() => setOpenMenu(false)}
 					>
 						<Link href='/'>
@@ -105,7 +105,7 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 					<Link href={contactLinks.email.link}>
 						<a
 							data-cursor='-hidden'
-							className='ss-link-underline text-xl lg:text-lg'
+							className='ss-link-underline text-xl leading-none lg:text-lg'
 							target='_blank'
 							rel='noreferrer noopener'
 						>

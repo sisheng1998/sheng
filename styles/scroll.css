@@ -74,7 +74,7 @@ html.has-scroll-dragging {
 	right: 0;
 	background-color: #262626;
 	opacity: 1;
-	width: 8px;
+	width: 6px;
 	border-radius: 999px;
 	margin: 2px;
 	cursor: -webkit-grab;
@@ -89,4 +89,10 @@ html.has-scroll-dragging {
 [data-scroll-direction='horizontal'] .ss-scrollbar_thumb {
 	right: auto;
 	bottom: 0;
+}
+
+@media (max-width: 1023px) {
+	.ss-scrollbar_thumb {
+		width: 4px;
+	}
 }

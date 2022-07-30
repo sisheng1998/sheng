@@ -15,6 +15,18 @@ const Scroll = ({ children }: ScrollProps) => {
 			options={{
 				smooth: true,
 				scrollbarClass: 'ss-scrollbar',
+				inertia: 0.8,
+				getDirection: true,
+				mobile: {
+					breakpoint: 0,
+					smooth: true,
+					getDirection: true,
+				},
+				tablet: {
+					breakpoint: 0,
+					smooth: true,
+					getDirection: true,
+				},
 			}}
 			watch={[]}
 			containerRef={containerRef}

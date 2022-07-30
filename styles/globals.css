@@ -37,7 +37,7 @@
 
 	html {
 		-webkit-tap-highlight-color: transparent;
-		@apply scroll-smooth text-black selection:bg-black selection:text-white;
+		@apply scroll-smooth bg-white text-black selection:bg-black selection:text-white;
 	}
 
 	img {
@@ -108,7 +108,7 @@
 	}
 
 	.container {
-		@apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 sm:px-6 sm:py-24;
+		@apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 md:px-6 md:py-24;
 	}
 
 	.outline-text {
