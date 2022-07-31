@@ -17,8 +17,8 @@ const MagneticButton = ({
 }: MagneticButtonProps) => {
 	const buttonRef = useRef<any>(null)
 
-	const interpolationFactorX = isMenu ? 0.08 : 0.32
-	const interpolationFactorY = isMenu ? 0.08 : 0.32
+	const interpolationFactorX = isMenu ? 0.08 : 0.24
+	const interpolationFactorY = isMenu ? 0.08 : 0.24
 
 	const magneticEffect = (btn: HTMLInputElement, e: MouseEvent) => {
 		const position = btn.getBoundingClientRect()

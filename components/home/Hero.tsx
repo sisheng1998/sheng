@@ -1,7 +1,6 @@
 const Hero = () => {
 	return (
 		<section
-			id='about'
 			data-scroll-section
 			className='container flex min-h-screen flex-col justify-center lg:min-h-0'
 		>
@@ -28,7 +27,7 @@ const Hero = () => {
 					Full Stack Developer
 				</h1>
 
-				<h2 className='-ml-0.5 -mt-2 hidden py-3 text-5xl font-medium md:block'>
+				<h2 className='-ml-0.5 -mt-2 hidden py-3 text-6xl font-medium md:block'>
 					Full Stack Developer
 				</h2>
 			</div>

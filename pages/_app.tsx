@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Sheng - Creative Web Developer</title>
+				<title>Sheng - Full Stack Developer</title>
 				<meta
 					name='description'
-					content='Interested in web development, JavaScript and related libraries / frameworks. Passionate about programming and designing.'
+					content='Interested in web development, JavaScript and its libraries / frameworks. Passionate about programming and designing.'
 				/>
 				<link
 					rel='apple-touch-icon'

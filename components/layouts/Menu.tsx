@@ -1,10 +1,5 @@
 import Link from 'next/link'
-import {
-	resumeLink,
-	menuLinks,
-	contactLinks,
-	socialLinks,
-} from '../config/links'
+import { resumeLink, menuLinks, contactLinks, socialLinks } from '../data/links'
 import MagneticButton from '../MagneticButton'
 
 interface MenuProps {

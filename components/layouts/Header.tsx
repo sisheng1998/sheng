@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import Logo from '../Logo'
 import Button from '../Button'
-import { resumeLink } from '../config/links'
+import { resumeLink } from '../data/links'
 
 interface HeaderProps {
 	section: string
@@ -14,7 +14,11 @@ const Header = ({ section, setSection }: HeaderProps) => {
 
 	useEffect(() => {
 		if (section !== '') {
-			scroll.scrollTo(document.querySelector(section))
+			const option: { offset: number } = {
+				offset: section.includes('about') ? -160 : 0,
+			}
+
+			scroll.scrollTo(document.querySelector(section), option)
 			setSection('')
 		}
 	}, [section, setSection, scroll])
