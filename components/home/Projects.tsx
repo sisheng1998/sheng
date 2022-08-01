@@ -14,6 +14,7 @@ const Projects = () => {
 						key={index}
 						title={project.title}
 						description={project.description}
+						requestDemoEmailData={project.requestDemoEmailData}
 						src={project.src}
 						alt={project.alt}
 						url={project.url}

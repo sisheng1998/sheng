@@ -3,7 +3,7 @@ import skills, { skillsData } from './skills'
 export interface projectData {
 	title: string
 	description: string
-	remark?: string
+	requestDemoEmailData?: string
 	src: string
 	alt: string
 	url: string
@@ -19,7 +19,7 @@ const projects: projectData[] = [
 	{
 		title: 'Personal Website',
 		description:
-			'A website built from scratch to promote myself and showcase my projects, learning new frameworks / languages at the same time.',
+			'A personal website designed & developed from scratch to promote myself and showcase my projects, learning new frameworks / languages at the same time.',
 		src: '/images/personal-website.jpg',
 		alt: 'Personal Website',
 		url: '/',
@@ -31,7 +31,9 @@ const projects: projectData[] = [
 	{
 		title: 'SCIMS',
 		description:
-			'A web-based inventory management system with mobile application supports that helps users to manage the chemical easily.',
+			'A web-based inventory management system with mobile app supports that helps users to manage the chemical easily.',
+		requestDemoEmailData:
+			'?subject=Request%20Demo%20Account%20for%20SCIMS&body=Hi%20Si%20Sheng%2C%0A%0AI%20would%20like%20to%20request%20a%20demo%20account%20for%20SCIMS.%0A%0AThanks.',
 		src: '/images/scims.jpg',
 		alt: 'SCIMS',
 		url: 'https://scims.sisheng.asia',

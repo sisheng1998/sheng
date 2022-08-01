@@ -1,24 +1,36 @@
 import Link from 'next/link'
+import { contactLinks } from '../data/links'
 import { projectData } from '../data/projects'
 import MagneticButton from '../MagneticButton'
 
 const ProjectCard = ({
 	title,
 	description,
+	requestDemoEmailData,
 	src,
 	alt,
 	url,
 	links,
 	skills,
 }: projectData) => {
+	const isCurrentWebsite = url === '/'
+
 	return (
 		<div className='flex flex-col pb-32 lg:pb-24 md:pb-16'>
 			<div
-				data-cursor-text='Visit Website'
-				className='group overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-95'
+				data-cursor-text={
+					isCurrentWebsite ? 'Current Website' : 'Visit Website'
+				}
+				className='group overflow-hidden rounded-2xl'
 			>
 				<Link href={url}>
-					<a target='_blank' rel='noreferrer noopener'>
+					<a
+						className={
+							isCurrentWebsite ? 'pointer-events-none cursor-default' : ''
+						}
+						target='_blank'
+						rel='noreferrer noopener'
+					>
 						<picture>
 							<source srcSet={src} type='image/jpg' />
 							<img
@@ -26,44 +38,65 @@ const ProjectCard = ({
 								alt={alt}
 								width='664'
 								height='498'
-								className='w-full transition-transform duration-500 group-hover:scale-110 group-hover:duration-700'
+								className='w-full transition-transform duration-500 group-hover:scale-105 group-hover:duration-700'
 							/>
 						</picture>
 					</a>
 				</Link>
 			</div>
 
-			<p className='mb-8 mt-9 flex flex-wrap items-center'>
-				{skills.map((skill, index) => (
-					<span
-						key={index}
-						className={`mr-2 mt-3 rounded-full bg-opacity-75 py-1 px-3 font-medium ${skill.classes} md:mr-1.5 md:mt-2.5 md:text-sm`}
-					>
-						{skill.name}
-					</span>
-				))}
-			</p>
+			<div className='mt-6 mb-9'>
+				<p className='flex flex-wrap items-center'>
+					{skills.map((skill, index) => (
+						<span
+							key={index}
+							className={`mr-2 mt-3 rounded-full bg-opacity-75 py-1 px-3 ${skill.classes} md:text-sm`}
+						>
+							{skill.name}
+						</span>
+					))}
+				</p>
 
-			<h3 className='text-3xl font-medium leading-tight md:text-2xl'>
-				{title}
-			</h3>
-			<p className='mt-4 mb-12 text-xl'>{description}</p>
+				<h3 className='mt-9 text-3xl font-medium leading-tight md:text-2xl'>
+					{title}
+				</h3>
 
-			<div className='mt-auto space-x-12 md:space-x-8'>
-				<Link href={url}>
-					<a
-						data-cursor='-hidden'
-						className='ss-link-underline pb-3 text-xl leading-none lg:text-lg'
-						target='_blank'
-						rel='noreferrer noopener'
-					>
-						Visit Website
-					</a>
-				</Link>
+				<p className='mt-3 text-xl text-black/75 md:text-lg'>{description}</p>
+
+				{requestDemoEmailData && (
+					<Link href={contactLinks.email.link + requestDemoEmailData}>
+						<a
+							data-cursor='-hidden'
+							className='ss-link-underline mt-6 pb-2 text-base leading-none text-black/75 md:pb-1 md:text-sm'
+							target='_blank'
+							rel='noreferrer noopener'
+						>
+							Request Demo Account
+						</a>
+					</Link>
+				)}
+			</div>
+
+			<div className='mt-auto'>
+				{!isCurrentWebsite && (
+					<Link href={url}>
+						<a
+							data-cursor='-hidden'
+							className='ss-link-underline mt-3 mr-12 pb-3 text-xl leading-none lg:pb-1 lg:text-lg md:mr-8'
+							target='_blank'
+							rel='noreferrer noopener'
+						>
+							Visit Website
+						</a>
+					</Link>
+				)}
 
 				{Object.keys(links).length !== 0 &&
 					Object.keys(links).map((key: string, index: number) => (
-						<MagneticButton key={index} className='overflow-hidden'>
+						<MagneticButton
+							key={index}
+							className='mr-12 mt-3 overflow-hidden md:mr-8'
+						>
 							<Link href={links[key]}>
 								<a
 									data-text={key}

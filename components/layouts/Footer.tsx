@@ -15,7 +15,7 @@ const Footer = () => {
 			<div className='container pt-20 lg:pt-16 md:pt-12'>
 				<hr className='bg-black/30' />
 
-				<p className='my-36 max-w-[45ch] text-2xl leading-normal tracking-tight xl:my-32 lg:my-28 lg:text-xl md:my-20 md:text-lg'>
+				<p className='my-36 max-w-[45ch] text-2xl leading-normal tracking-tight xl:my-32 lg:my-28 lg:text-xl md:my-20'>
 					Feel free to contact me if you have any questions or just want to say
 					hello. Any collaborations and opportunities are always more than
 					welcomed. Grab a copy of{' '}
