@@ -67,7 +67,7 @@ const ProjectCard = ({
 					<Link href={contactLinks.email.link + requestDemoEmailData}>
 						<a
 							data-cursor='-hidden'
-							className='ss-link-underline mt-6 pb-2 text-base leading-none text-black/75 md:pb-1 md:text-sm'
+							className='ss-link-underline mt-6 text-base md:text-sm'
 							target='_blank'
 							rel='noreferrer noopener'
 						>
@@ -78,18 +78,18 @@ const ProjectCard = ({
 			</div>
 
 			<div className='mt-auto'>
-				{!isCurrentWebsite && (
-					<Link href={url}>
-						<a
-							data-cursor='-hidden'
-							className='ss-link-underline mt-3 mr-12 pb-3 text-xl leading-none lg:pb-1 lg:text-lg md:mr-8'
-							target='_blank'
-							rel='noreferrer noopener'
-						>
-							Visit Website
-						</a>
-					</Link>
-				)}
+				<Link href={url}>
+					<a
+						data-cursor='-hidden'
+						className={`ss-link-underline mt-3 mr-12 pb-1.5 text-xl lg:text-lg md:mr-8 ${
+							isCurrentWebsite ? 'pointer-events-none line-through' : ''
+						}`}
+						target='_blank'
+						rel='noreferrer noopener'
+					>
+						Visit Website
+					</a>
+				</Link>
 
 				{Object.keys(links).length !== 0 &&
 					Object.keys(links).map((key: string, index: number) => (

@@ -5,6 +5,7 @@ import '../styles/globals.css'
 import '../styles/scroll.css'
 import '../styles/cursor.css'
 
+import Preloader from '../components/Preloader'
 import Layout from '../components/layouts/Layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -41,6 +42,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name='google' content='notranslate' />
 				<meta httpEquiv='Content-Language' content='en' />
 			</Head>
+
+			<Preloader />
 
 			<Layout>
 				<Component {...pageProps} />

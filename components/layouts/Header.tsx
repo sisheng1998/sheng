@@ -13,6 +13,8 @@ const Header = ({ section, setSection }: HeaderProps) => {
 	const { scroll } = useLocomotiveScroll()
 
 	useEffect(() => {
+		if (!scroll) return
+
 		if (section !== '') {
 			const option: { offset: number } = {
 				offset: section.includes('about') ? -160 : 0,

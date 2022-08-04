@@ -38,7 +38,7 @@ const Footer = () => {
 				<Link href={contactLinks.email.link}>
 					<a
 						data-cursor='-hidden'
-						className='ss-link-underline pb-3 text-4xl leading-none lg:text-3xl'
+						className='ss-link-underline pb-2 text-4xl lg:text-3xl'
 						target='_blank'
 						rel='noreferrer noopener'
 					>

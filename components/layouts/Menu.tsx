@@ -100,7 +100,7 @@ const Menu = ({ openMenu, setOpenMenu, setSection }: MenuProps) => {
 					<Link href={contactLinks.email.link}>
 						<a
 							data-cursor='-hidden'
-							className='ss-link-underline text-xl leading-none lg:text-lg'
+							className='ss-link-underline text-xl lg:text-lg'
 							target='_blank'
 							rel='noreferrer noopener'
 						>
