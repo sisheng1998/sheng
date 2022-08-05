@@ -68,7 +68,7 @@ const Footer = () => {
 			<div className='container mt-auto flex items-end justify-between pb-12 pt-0 text-lg text-black/50 lg:pb-8 md:block md:space-y-3 md:pb-6 md:text-base'>
 				<p>&copy; {currentYear} - All Rights Reserved</p>
 				<p>
-					Design & Development
+					Designed & Built by
 					<Logo className='ml-2 text-2xl text-black' />
 				</p>
 			</div>

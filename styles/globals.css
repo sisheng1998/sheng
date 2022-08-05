@@ -141,7 +141,7 @@
 
 	.ss-preloader + nav,
 	.ss-preloader ~ main header > * {
-		@apply opacity-100 transition-opacity delay-[1.25s] duration-[750ms];
+		@apply opacity-100 transition-opacity delay-[1.25s] duration-500;
 	}
 
 	.ss-preloader.-loading + nav,
@@ -208,6 +208,10 @@
 
 	.container {
 		@apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 md:px-6 md:py-24;
+	}
+
+	.img-container {
+		@apply relative overflow-hidden after:absolute after:top-0 after:right-0 after:h-full after:w-0 after:bg-white;
 	}
 
 	.outline-text {
