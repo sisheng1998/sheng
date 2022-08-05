@@ -52,7 +52,7 @@
 @layer components {
 	.ss-preloader {
 		@apply pointer-events-none invisible fixed inset-0 z-[300] flex items-center justify-center;
-		transition: background 0s 1s, visibility 0s 1.5s;
+		transition: background 0s 0.75s, visibility 0s 1.25s;
 	}
 
 	.ss-preloader.-loading {
@@ -61,7 +61,7 @@
 
 	.ss-preloader-fill {
 		@apply absolute inset-0 origin-bottom scale-y-0 bg-black;
-		animation: preloader-fill 1s 0.5s forwards;
+		animation: preloader-fill 0.75s 0.5s forwards;
 	}
 
 	.ss-preloader.-loading .ss-preloader-fill {
@@ -139,24 +139,34 @@
 		}
 	}
 
-	nav .menu span {
+	.ss-preloader + nav,
+	.ss-preloader ~ main header > * {
+		@apply opacity-100 transition-opacity delay-[1.25s] duration-[750ms];
+	}
+
+	.ss-preloader.-loading + nav,
+	.ss-preloader.-loading ~ main header > * {
+		@apply opacity-0 delay-[0s];
+	}
+
+	nav .ss-menu span {
 		transition-property: transform, top;
 		transition-delay: 0s, 0.15s;
 		transition-duration: 0.3s;
 	}
 
-	nav.-open .menu span {
+	nav.-open .ss-menu span {
 		top: 0;
 		transition-property: top, transform;
 		transition-delay: 0s, 0.15s;
 		transition-duration: 0.3s;
 	}
 
-	nav.-open .menu span:first-child {
+	nav.-open .ss-menu span:first-child {
 		transform: rotate(45deg);
 	}
 
-	nav.-open .menu span:last-child {
+	nav.-open .ss-menu span:last-child {
 		transform: rotate(-45deg);
 	}
 

@@ -22,9 +22,11 @@ const Hero = () => {
 
 				<h1
 					data-cursor-img='/images/meme.jpg'
-					className='outline-text -ml-1.5 -mt-4 cursor-default py-3 text-9xl font-semibold leading-tight transition-colors duration-300 hover:text-black 2xl:text-[9vw] xl:-ml-1 xl:-mt-2 lg:-ml-0.5 md:hidden'
+					className='ss-title outline-text -ml-1.5 -mt-4 cursor-default overflow-hidden py-3 text-9xl font-semibold leading-tight transition-colors duration-300 hover:text-black 2xl:text-[9vw] xl:-ml-1 xl:-mt-2 lg:-ml-0.5 md:hidden'
 				>
-					Full Stack Developer
+					<span className='inline-block'>Full</span>{' '}
+					<span className='inline-block'>Stack</span>{' '}
+					<span className='inline-block'>Developer</span>
 				</h1>
 
 				<h2 className='-ml-0.5 -mt-2 hidden py-3 text-6xl font-medium md:block'>

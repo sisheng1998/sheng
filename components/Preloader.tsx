@@ -4,11 +4,11 @@ const Preloader = () => {
 	const [loading, setLoading] = useState<Boolean>(true)
 
 	useEffect(() => {
-		setTimeout(() => setLoading(false), 2500)
+		setTimeout(() => setLoading(false), 2250)
 	}, [])
 
 	return (
-		<div className={`ss-preloader${loading ? ' -loading' : ''}`}>
+		<div className={`ss-preloader ${loading ? '-loading' : ''}`}>
 			<div className='ss-preloader-fill'></div>
 			<div className='ss-preloader-content'>
 				<svg
