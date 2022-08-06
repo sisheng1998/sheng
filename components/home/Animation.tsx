@@ -48,7 +48,7 @@ const Animation = () => {
 			const imageReveal = CSSRulePlugin.getRule('.img-container::after')
 
 			gsap.from(imageReveal, {
-				delay: 5,
+				delay: 3.75,
 				duration: 1.25,
 				width: '100%',
 				ease: Power2.easeInOut,

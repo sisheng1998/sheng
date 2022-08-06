@@ -12,10 +12,44 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Sheng - Full Stack Developer</title>
+				<title>Si Sheng - Full Stack Developer</title>
+				<meta name='title' content='Si Sheng - Full Stack Developer' />
 				<meta
 					name='description'
-					content='Interested in web development, JavaScript and its libraries / frameworks. Passionate about programming and designing.'
+					content='Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter.'
+				/>
+				<meta
+					name='keywords'
+					content='Full Stack Developer, JavaScript Developer, Web Developer, Si Sheng'
+				/>
+				<meta name='robots' content='index, follow' />
+				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+				<meta name='language' content='English' />
+				<meta name='author' content='Ooi Si Sheng' />
+				<meta property='og:type' content='website' />
+				<meta property='og:url' content='https://sisheng.my/' />
+				<meta property='og:title' content='Si Sheng - Full Stack Developer' />
+				<meta
+					property='og:description'
+					content='Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter.'
+				/>
+				<meta
+					property='og:image'
+					content='https://sisheng.my/images/open-graph-img.jpg'
+				/>
+				<meta property='twitter:card' content='summary_large_image' />
+				<meta property='twitter:url' content='https://sisheng.my/' />
+				<meta
+					property='twitter:title'
+					content='Si Sheng - Full Stack Developer'
+				/>
+				<meta
+					property='twitter:description'
+					content='Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter.'
+				/>
+				<meta
+					property='twitter:image'
+					content='https://sisheng.my/images/open-graph-img.jpg'
 				/>
 				<link
 					rel='apple-touch-icon'
