@@ -19,7 +19,7 @@ const projects: projectData[] = [
 	{
 		title: 'Personal Website',
 		description:
-			'A personal website designed & built from scratch to promote myself and showcase my projects while learning new frameworks / languages at the same time.',
+			'Designed & developed a personal website from scratch to promote myself and showcase my projects while learning new frameworks / languages at the same time.',
 		src: '/images/personal-website.jpg',
 		alt: 'Personal Website',
 		url: '/',
