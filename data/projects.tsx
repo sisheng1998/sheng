@@ -36,7 +36,7 @@ const projects: projectData[] = [
 			'?subject=Request%20Demo%20Account%20for%20SCIMS&body=Hi%20Si%20Sheng%2C%0A%0AI%20would%20like%20to%20request%20a%20demo%20account%20for%20SCIMS.%0A%0AThanks.',
 		src: '/images/scims.jpg',
 		alt: 'SCIMS',
-		url: 'https://scims.sisheng.asia',
+		url: 'https://scims.sisheng.my',
 		links: {
 			Behance:
 				'https://www.behance.net/gallery/148756031/Smart-Chemical-Inventory-Management-System',

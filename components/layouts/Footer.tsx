@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { resumeLink, contactLinks, socialLinks } from '../data/links'
+import { resumeLink, contactLinks, socialLinks } from '../../data/links'
 import MagneticButton from '../MagneticButton'
 import Logo from '../Logo'
 

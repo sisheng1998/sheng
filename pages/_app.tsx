@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 import '../styles/globals.css'
 import '../styles/scroll.css'
@@ -7,8 +9,23 @@ import '../styles/cursor.css'
 
 import Preloader from '../components/Preloader'
 import Layout from '../components/layouts/Layout'
+import * as gtag from '../utils/gtag'
 
 function MyApp({ Component, pageProps }: AppProps) {
+	const router = useRouter()
+
+	useEffect(() => {
+		const handleRouteChange = (url: URL) => {
+			gtag.pageview(url)
+		}
+
+		router.events.on('routeChangeComplete', handleRouteChange)
+
+		return () => {
+			router.events.off('routeChangeComplete', handleRouteChange)
+		}
+	}, [router.events])
+
 	return (
 		<>
 			<Head>

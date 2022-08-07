@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { contactLinks } from '../data/links'
-import { projectData } from '../data/projects'
+import { contactLinks } from '../../data/links'
+import { projectData } from '../../data/projects'
 import MagneticButton from '../MagneticButton'
 
 const ProjectCard = ({

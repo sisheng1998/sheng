@@ -3,7 +3,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 import Logo from '../Logo'
 import Button from '../Button'
-import { resumeLink } from '../data/links'
+import { resumeLink } from '../../data/links'
 
 interface HeaderProps {
 	section: string
