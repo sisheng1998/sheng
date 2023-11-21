@@ -83,7 +83,7 @@ const projects: projectData[] = [
 			"Website developed for the virtual exhibition of Cahaya XR, showcasing Penang's traditional stories with immersive technologies.",
 		src: '/images/cahaya-xr.jpg',
 		alt: 'Cahaya XR',
-		url: 'https://cahayaxr.com',
+		url: 'https://cahayaxrgallery.com',
 		links: {},
 		skills: [skills[7], skills[8], skills[9]],
 	},
