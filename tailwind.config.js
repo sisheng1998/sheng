@@ -59,7 +59,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['TT Norms Pro', ...defaultTheme.fontFamily.sans],
+				sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},

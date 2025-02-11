@@ -85,11 +85,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 					sizes='16x16'
 					href='/favicons/favicon-16x16.png'
 				/>
-				<link
-					rel='mask-icon'
-					href='/favicons/safari-pinned-tab.svg'
-					color='#ffffff'
-				/>
 			</Head>
 
 			<Preloader />
