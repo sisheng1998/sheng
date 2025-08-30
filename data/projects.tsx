@@ -40,6 +40,18 @@ const projects: projectData[] = [
     skills: [skills[0], skills[1], skills[2], skills[3], skills[4], skills[5]],
   },
   {
+    title: "Mailcraft",
+    description:
+      "An online editor for creating and previewing email templates with ease, developed with NextJS and Monaco Editor.",
+    src: "/images/mailcraft.jpg",
+    alt: "Mailcraft",
+    url: "https://mailcraft.sisheng.my",
+    links: {
+      GitHub: "https://github.com/sisheng1998/mailcraft",
+    },
+    skills: [skills[12], skills[13], skills[5]],
+  },
+  {
     title: "Creatinno Tech Solutions",
     description:
       "Re-designed, developed, and maintaining the brand new corporate website for Creatinno Tech Solutions.",
@@ -80,23 +92,6 @@ const projects: projectData[] = [
     url: "https://cahayaxrgallery.com",
     links: {},
     skills: [skills[7], skills[8], skills[9]],
-  },
-  {
-    title: "SSF Home",
-    description:
-      "Fully customized e-commerce website with well-designed interface, providing customer a seamless online shopping experience.",
-    src: "/images/ssf-home.jpg",
-    alt: "SSF Home",
-    url: "https://ssfhome.com",
-    links: {},
-    skills: [
-      skills[6],
-      skills[7],
-      skills[8],
-      skills[9],
-      skills[10],
-      skills[11],
-    ],
   },
 ]
 
