@@ -1,17 +1,17 @@
-import skills, { skillsData } from "./skills";
+import skills, { skillsData } from "./skills"
 
 export interface projectData {
-  title: string;
-  description: string;
-  src: string;
-  alt: string;
-  url?: string;
+  title: string
+  description: string
+  src: string
+  alt: string
+  url?: string
   links: {
-    Behance?: string;
-    GitHub?: string;
-    [key: string]: any;
-  };
-  skills: skillsData[];
+    Behance?: string
+    GitHub?: string
+    [key: string]: any
+  }
+  skills: skillsData[]
 }
 
 const projects: projectData[] = [
@@ -98,6 +98,6 @@ const projects: projectData[] = [
       skills[11],
     ],
   },
-];
+]
 
-export default projects;
+export default projects

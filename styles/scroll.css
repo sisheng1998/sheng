@@ -1,98 +1,98 @@
 html.has-scroll-smooth {
-	overflow: hidden;
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 html.has-scroll-dragging {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .has-scroll-smooth body {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .has-scroll-smooth [data-scroll-container] {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
-[data-scroll-direction='horizontal'] [data-scroll-container] {
-	height: 100vh;
-	display: inline-block;
-	white-space: nowrap;
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-[data-scroll-direction='horizontal'] [data-scroll-section] {
-	display: inline-block;
-	vertical-align: top;
-	white-space: nowrap;
-	height: 100%;
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
 }
 
 .ss-scrollbar {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 8px;
-	height: 100%;
-	transform-origin: center right;
-	transition: transform 0.3s, opacity 0.3s;
-	opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
 }
 
 .ss-scrollbar:hover {
-	transform: scaleX(1.25);
+  transform: scaleX(1.25);
 }
 
 .ss-scrollbar:hover,
 .has-scroll-scrolling .ss-scrollbar,
 .has-scroll-dragging .ss-scrollbar {
-	opacity: 1;
+  opacity: 1;
 }
 
-[data-scroll-direction='horizontal'] .ss-scrollbar {
-	width: 100%;
-	height: 10px;
-	top: auto;
-	bottom: 0;
-	transform: scaleY(1);
+[data-scroll-direction="horizontal"] .ss-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
 }
 
-[data-scroll-direction='horizontal'] .ss-scrollbar:hover {
-	transform: scaleY(1.25);
+[data-scroll-direction="horizontal"] .ss-scrollbar:hover {
+  transform: scaleY(1.25);
 }
 
 .ss-scrollbar_thumb {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: #262626;
-	opacity: 1;
-	width: 6px;
-	border-radius: 999px;
-	margin: 2px;
-	cursor: -webkit-grab;
-	cursor: grab;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #262626;
+  opacity: 1;
+  width: 6px;
+  border-radius: 999px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .has-scroll-dragging .ss-scrollbar_thumb {
-	cursor: -webkit-grabbing;
-	cursor: grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
-[data-scroll-direction='horizontal'] .ss-scrollbar_thumb {
-	right: auto;
-	bottom: 0;
+[data-scroll-direction="horizontal"] .ss-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 @media (max-width: 1023px) {
-	.ss-scrollbar_thumb {
-		width: 4px;
-	}
+  .ss-scrollbar_thumb {
+    width: 4px;
+  }
 }

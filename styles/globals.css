@@ -3,218 +3,219 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-family: 'Plus Jakarta Sans';
-		src: local('Plus Jakarta Sans Regular'), local('PlusJakartaSans-Regular'),
-			url('../public/fonts/PlusJakartaSans-Regular.woff2') format('woff2');
-		font-weight: normal;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: local("Plus Jakarta Sans Regular"), local("PlusJakartaSans-Regular"),
+      url("../public/fonts/PlusJakartaSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Plus Jakarta Sans';
-		src: local('Plus Jakarta Sans Italic'), local('PlusJakartaSans-Italic'),
-			url('../public/fonts/PlusJakartaSans-Italic.woff2') format('woff2');
-		font-weight: normal;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: local("Plus Jakarta Sans Italic"), local("PlusJakartaSans-Italic"),
+      url("../public/fonts/PlusJakartaSans-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+  }
 
-	@font-face {
-		font-family: 'Plus Jakarta Sans';
-		src: local('Plus Jakarta Sans Medium'), local('PlusJakartaSans-Medium'),
-			url('../public/fonts/PlusJakartaSans-Medium.woff2') format('woff2');
-		font-weight: 500;
-		font-style: normal;
-	}
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: local("Plus Jakarta Sans Medium"), local("PlusJakartaSans-Medium"),
+      url("../public/fonts/PlusJakartaSans-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
 
-	@font-face {
-		font-family: 'Plus Jakarta Sans';
-		src: local('Plus Jakarta Sans Medium Italic'), local('PlusJakartaSans-MediumItalic'),
-			url('../public/fonts/PlusJakartaSans-MediumItalic.woff2') format('woff2');
-		font-weight: 500;
-		font-style: italic;
-	}
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: local("Plus Jakarta Sans Medium Italic"),
+      local("PlusJakartaSans-MediumItalic"),
+      url("../public/fonts/PlusJakartaSans-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+  }
 
-	html {
-		-webkit-tap-highlight-color: transparent;
-		@apply scroll-smooth bg-white text-black selection:bg-black selection:text-white;
-	}
+  html {
+    -webkit-tap-highlight-color: transparent;
+    @apply scroll-smooth bg-white text-black selection:bg-black selection:text-white;
+  }
 
-	img {
-		-webkit-user-drag: none;
-		-khtml-user-drag: none;
-		-moz-user-drag: none;
-		-o-user-drag: none;
-		user-drag: none;
-	}
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
 }
 
 @layer components {
-	.ss-preloader {
-		@apply pointer-events-none invisible fixed inset-0 z-[300] flex items-center justify-center;
-		transition: background 0s 0.75s, visibility 0s 1.25s;
-	}
+  .ss-preloader {
+    @apply pointer-events-none invisible fixed inset-0 z-[300] flex items-center justify-center;
+    transition: background 0s 0.75s, visibility 0s 1.25s;
+  }
 
-	.ss-preloader.-loading {
-		@apply pointer-events-auto visible bg-white delay-[0s];
-	}
+  .ss-preloader.-loading {
+    @apply pointer-events-auto visible bg-white delay-[0s];
+  }
 
-	.ss-preloader-fill {
-		@apply absolute inset-0 origin-bottom scale-y-0 bg-black;
-		animation: preloader-fill 0.75s 0.5s forwards;
-	}
+  .ss-preloader-fill {
+    @apply absolute inset-0 origin-bottom scale-y-0 bg-black;
+    animation: preloader-fill 0.75s 0.5s forwards;
+  }
 
-	.ss-preloader.-loading .ss-preloader-fill {
-		animation: none;
-	}
+  .ss-preloader.-loading .ss-preloader-fill {
+    animation: none;
+  }
 
-	.ss-preloader-content {
-		@apply w-60 overflow-hidden xl:w-48 md:w-36;
-	}
+  .ss-preloader-content {
+    @apply w-60 overflow-hidden xl:w-48 md:w-36;
+  }
 
-	.ss-preloader-content svg {
-		@apply w-full -translate-y-full transition-transform duration-500;
-		animation: logo-fill 1s 1.5s forwards;
-	}
+  .ss-preloader-content svg {
+    @apply w-full -translate-y-full transition-transform duration-500;
+    animation: logo-fill 1s 1.5s forwards;
+  }
 
-	.ss-preloader.-loading .ss-preloader-content svg {
-		@apply translate-y-0;
-	}
+  .ss-preloader.-loading .ss-preloader-content svg {
+    @apply translate-y-0;
+  }
 
-	.ss-preloader-content path {
-		animation: logo-line 1.5s forwards;
-	}
+  .ss-preloader-content path {
+    animation: logo-line 1.5s forwards;
+  }
 
-	.ss-preloader-content path:nth-child(1) {
-		stroke-dasharray: 405;
-		stroke-dashoffset: 405;
-	}
+  .ss-preloader-content path:nth-child(1) {
+    stroke-dasharray: 405;
+    stroke-dashoffset: 405;
+  }
 
-	.ss-preloader-content path:nth-child(2) {
-		stroke-dasharray: 365;
-		stroke-dashoffset: 365;
-	}
+  .ss-preloader-content path:nth-child(2) {
+    stroke-dasharray: 365;
+    stroke-dashoffset: 365;
+  }
 
-	.ss-preloader-content path:nth-child(3) {
-		stroke-dasharray: 325;
-		stroke-dashoffset: 325;
-	}
+  .ss-preloader-content path:nth-child(3) {
+    stroke-dasharray: 325;
+    stroke-dashoffset: 325;
+  }
 
-	.ss-preloader-content path:nth-child(4) {
-		stroke-dasharray: 415;
-		stroke-dashoffset: 415;
-	}
+  .ss-preloader-content path:nth-child(4) {
+    stroke-dasharray: 415;
+    stroke-dashoffset: 415;
+  }
 
-	.ss-preloader-content path:nth-child(5) {
-		stroke-dasharray: 470;
-		stroke-dashoffset: 470;
-	}
+  .ss-preloader-content path:nth-child(5) {
+    stroke-dasharray: 470;
+    stroke-dashoffset: 470;
+  }
 
-	@keyframes logo-line {
-		to {
-			stroke-dashoffset: 0;
-		}
-	}
+  @keyframes logo-line {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
-	@keyframes logo-fill {
-		from {
-			fill: transparent;
-		}
-		to {
-			fill: black;
-		}
-	}
+  @keyframes logo-fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: black;
+    }
+  }
 
-	@keyframes preloader-fill {
-		0% {
-			transform: scaleY(0);
-		}
-		50% {
-			transform: scaleY(1);
-		}
-		100% {
-			transform: scaleY(1) translateY(-100%);
-		}
-	}
+  @keyframes preloader-fill {
+    0% {
+      transform: scaleY(0);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+    100% {
+      transform: scaleY(1) translateY(-100%);
+    }
+  }
 
-	.ss-preloader + nav,
-	.ss-preloader ~ main header > * {
-		@apply opacity-100 transition-opacity delay-[1.25s] duration-500;
-	}
+  .ss-preloader + nav,
+  .ss-preloader ~ main header > * {
+    @apply opacity-100 transition-opacity delay-[1.25s] duration-500;
+  }
 
-	.ss-preloader.-loading + nav,
-	.ss-preloader.-loading ~ main header > * {
-		@apply opacity-0 delay-[0s];
-	}
+  .ss-preloader.-loading + nav,
+  .ss-preloader.-loading ~ main header > * {
+    @apply opacity-0 delay-[0s];
+  }
 
-	nav .ss-menu span {
-		transition-property: transform, top;
-		transition-delay: 0s, 0.15s;
-		transition-duration: 0.3s;
-	}
+  nav .ss-menu span {
+    transition-property: transform, top;
+    transition-delay: 0s, 0.15s;
+    transition-duration: 0.3s;
+  }
 
-	nav.-open .ss-menu span {
-		top: 0;
-		transition-property: top, transform;
-		transition-delay: 0s, 0.15s;
-		transition-duration: 0.3s;
-	}
+  nav.-open .ss-menu span {
+    top: 0;
+    transition-property: top, transform;
+    transition-delay: 0s, 0.15s;
+    transition-duration: 0.3s;
+  }
 
-	nav.-open .ss-menu span:first-child {
-		transform: rotate(45deg);
-	}
+  nav.-open .ss-menu span:first-child {
+    transform: rotate(45deg);
+  }
 
-	nav.-open .ss-menu span:last-child {
-		transform: rotate(-45deg);
-	}
+  nav.-open .ss-menu span:last-child {
+    transform: rotate(-45deg);
+  }
 
-	.ss-btn {
-		@apply pointer-events-none relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-lg font-medium after:absolute after:inset-0 after:rounded-full after:border after:border-black after:border-opacity-10 after:transition-colors after:duration-200;
-	}
+  .ss-btn {
+    @apply pointer-events-none relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-lg font-medium after:absolute after:inset-0 after:rounded-full after:border after:border-black after:border-opacity-10 after:transition-colors after:duration-200;
+  }
 
-	.ss-btn-title {
-		@apply relative z-[1] block overflow-hidden;
-	}
+  .ss-btn-title {
+    @apply relative z-[1] block overflow-hidden;
+  }
 
-	.ss-btn-title span {
-		transition-property: color, transform;
-		transition-duration: 0.2s, 0.4s;
-		@apply relative block origin-top-left group-hover:-translate-y-[150%] group-hover:-skew-y-6 group-hover:text-white;
-	}
+  .ss-btn-title span {
+    transition-property: color, transform;
+    transition-duration: 0.2s, 0.4s;
+    @apply relative block origin-top-left group-hover:-translate-y-[150%] group-hover:-skew-y-6 group-hover:text-white;
+  }
 
-	.ss-btn-title span::after {
-		content: attr(data-text) !important;
-		@apply absolute left-0 top-[150%] block origin-top-left skew-y-6 transition-transform duration-500;
-	}
+  .ss-btn-title span::after {
+    content: attr(data-text) !important;
+    @apply absolute left-0 top-[150%] block origin-top-left skew-y-6 transition-transform duration-500;
+  }
 
-	.ss-btn-ripple {
-		@apply pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-[150%] translate-y-3/4 rounded-[50%] bg-black transition-transform duration-300 group-hover:translate-y-0;
-	}
+  .ss-btn-ripple {
+    @apply pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-[150%] translate-y-3/4 rounded-[50%] bg-black transition-transform duration-300 group-hover:translate-y-0;
+  }
 
-	.ss-link {
-		@apply relative inline-block origin-left transition-transform duration-500 hover:-translate-y-[120%] hover:skew-y-6 after:hover:-skew-y-6;
-	}
+  .ss-link {
+    @apply relative inline-block origin-left transition-transform duration-500 hover:-translate-y-[120%] hover:skew-y-6 after:hover:-skew-y-6;
+  }
 
-	.ss-link::after {
-		content: attr(data-text) !important;
-		@apply absolute top-[120%] block origin-left skew-y-12 transition-transform;
-	}
+  .ss-link::after {
+    content: attr(data-text) !important;
+    @apply absolute top-[120%] block origin-left skew-y-12 transition-transform;
+  }
 
-	.ss-link-underline {
-		@apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/30 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:hover:scale-x-100;
-	}
+  .ss-link-underline {
+    @apply relative inline-block pb-1 before:absolute before:left-0 before:bottom-0 before:h-px before:w-full before:bg-black/30 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-current after:transition-transform after:duration-500 after:hover:scale-x-100;
+  }
 
-	.container {
-		@apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 md:px-6 md:py-24;
-	}
+  .container {
+    @apply mx-auto w-full max-w-[1488px] px-16 py-40 xl:px-10 lg:px-8 lg:py-32 md:px-6 md:py-24;
+  }
 
-	.img-container {
-		@apply relative overflow-hidden after:absolute after:top-0 after:right-0 after:h-full after:w-0 after:bg-white;
-	}
+  .img-container {
+    @apply relative overflow-hidden after:absolute after:top-0 after:right-0 after:h-full after:w-0 after:bg-white;
+  }
 
-	.outline-text {
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-			1px 1px 0 #000;
-		@apply text-white;
-	}
+  .outline-text {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    @apply text-white;
+  }
 }

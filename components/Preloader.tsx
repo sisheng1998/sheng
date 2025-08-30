@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 
 const Preloader = () => {
-	const [loading, setLoading] = useState<Boolean>(true)
+  const [loading, setLoading] = useState<Boolean>(true)
 
-	useEffect(() => {
-		setTimeout(() => setLoading(false), 2250)
-	}, [])
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2250)
+  }, [])
 
-	return (
-		<div className={`ss-preloader ${loading ? '-loading' : ''}`}>
-			<div className='ss-preloader-fill'></div>
-			<div className='ss-preloader-content'>
-				<svg
+  return (
+    <div className={`ss-preloader ${loading ? "-loading" : ""}`}>
+      <div className="ss-preloader-fill"></div>
+      <div className="ss-preloader-content">
+        <svg
           width="383"
           height="127"
           viewBox="0 0 383 127"
@@ -54,9 +54,9 @@ const Preloader = () => {
             strokeWidth="1"
           />
         </svg>
-			</div>
-		</div>
-	)
+      </div>
+    </div>
+  )
 }
 
 export default Preloader

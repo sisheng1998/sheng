@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { projectData } from "../../data/projects";
-import MagneticButton from "../MagneticButton";
+import Link from "next/link"
+import { projectData } from "../../data/projects"
+import MagneticButton from "../MagneticButton"
 
 const ProjectCard = ({
   title,
@@ -22,7 +22,7 @@ const ProjectCard = ({
         className="w-full transition-transform duration-500 group-hover:scale-105 group-hover:duration-700"
       />
     </picture>
-  );
+  )
 
   return (
     <div className="flex flex-col pb-32 lg:pb-24 md:pb-16">
@@ -95,7 +95,7 @@ const ProjectCard = ({
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

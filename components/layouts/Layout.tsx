@@ -1,31 +1,31 @@
-import { useState } from 'react'
+import { useState } from "react"
 
-import NavBar from './NavBar'
-import Header from './Header'
-import Footer from './Footer'
-import Scroll from '../Scroll'
-import Cursor from '../Cursor'
+import NavBar from "./NavBar"
+import Header from "./Header"
+import Footer from "./Footer"
+import Scroll from "../Scroll"
+import Cursor from "../Cursor"
 
 interface LayoutProps {
-	children: React.ReactNode
+  children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
-	const [section, setSection] = useState('')
+  const [section, setSection] = useState("")
 
-	return (
-		<>
-			<NavBar setSection={setSection} />
+  return (
+    <>
+      <NavBar setSection={setSection} />
 
-			<Scroll>
-				<Header section={section} setSection={setSection} />
-				{children}
-				<Footer />
-			</Scroll>
+      <Scroll>
+        <Header section={section} setSection={setSection} />
+        {children}
+        <Footer />
+      </Scroll>
 
-			<Cursor />
-		</>
-	)
+      <Cursor />
+    </>
+  )
 }
 
 export default Layout
