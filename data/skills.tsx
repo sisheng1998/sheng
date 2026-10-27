@@ -64,6 +64,14 @@ const skills: skillsData[] = [
     name: "GSAP",
     classes: "bg-[#EDF5E8] text-[#4E9815]",
   },
+  {
+    name: "Convex",
+    classes: "bg-[#FDEBEA] text-[#EE342F]",
+  },
+  {
+    name: "Shadcn UI",
+    classes: "bg-[#E8E8E8] text-[#18181B]",
+  },
 ]
 
 export default skills

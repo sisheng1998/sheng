@@ -27,6 +27,25 @@ const projects: projectData[] = [
     skills: [skills[12], skills[13], skills[5], skills[14]],
   },
   {
+    title: "MYS",
+    description:
+      "A web-based donation management system for a temple to help track donations and manage donor information.",
+    src: "/images/mys.png",
+    alt: "MYS",
+    links: {
+      Behance: "https://www.behance.net/gallery/257650153/MYS",
+      GitHub: "https://github.com/sisheng1998/mys",
+    },
+    skills: [
+      skills[0],
+      skills[12],
+      skills[13],
+      skills[5],
+      skills[16],
+      skills[15],
+    ],
+  },
+  {
     title: "SCIMS",
     description:
       "A web-based inventory management system with mobile app supports that helps users to manage the chemical easily.",
@@ -82,16 +101,6 @@ const projects: projectData[] = [
       skills[10],
       skills[11],
     ],
-  },
-  {
-    title: "Cahaya XR",
-    description:
-      "Website developed for the virtual exhibition of Cahaya XR, showcasing Penang's traditional stories with immersive technologies.",
-    src: "/images/cahaya-xr.jpg",
-    alt: "Cahaya XR",
-    url: "https://cahayaxrgallery.com",
-    links: {},
-    skills: [skills[7], skills[8], skills[9]],
   },
 ]
 

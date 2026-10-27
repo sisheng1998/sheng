@@ -33,11 +33,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="title" content="Si Sheng - Full Stack Developer" />
         <meta
           name="description"
-          content="Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
+          content="Full Stack Developer in Malaysia. Specialized in TypeScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
         />
         <meta
           name="keywords"
-          content="Full Stack Developer, JavaScript Developer, Web Developer, Si Sheng"
+          content="Full Stack Developer, TypeScript Developer, Web Developer, Software Engineer, Si Sheng"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Si Sheng - Full Stack Developer" />
         <meta
           property="og:description"
-          content="Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
+          content="Full Stack Developer in Malaysia. Specialized in TypeScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
         />
         <meta
           property="og:image"
@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:description"
-          content="Full Stack Developer in Malaysia. Specialized in JavaScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
+          content="Full Stack Developer in Malaysia. Specialized in TypeScript and its frameworks / libraries. Independent, highly motivated, and proactive self-starter."
         />
         <meta
           property="twitter:image"
